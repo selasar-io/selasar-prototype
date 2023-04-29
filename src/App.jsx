@@ -5,6 +5,7 @@ import SignUp from './pages/login/signUp'
 import Search from './pages/search'
 import Details from './pages/details'
 import Verification from './pages/login/verification'
+import NotFound from './pages/404'
 function App() {
   return (
     <Router>
@@ -26,6 +27,9 @@ function App() {
         </Route>
         <Route exact path="/verification">
           < Verification/>
+        </Route>
+        <Route exact path="*">
+          < NotFound/>
         </Route>
       </Switch>
     </Router>

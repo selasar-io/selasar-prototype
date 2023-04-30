@@ -1,0 +1,21 @@
+.menu-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color:#DF2040;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.strip {
+  width: 20px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+}

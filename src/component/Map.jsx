@@ -1,27 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet/dist/leaflet';
-import icon from '../asset/marker.png';
+import icon from '../asset/marker.svg';
 import './Map.css'
 function Map() {
     useEffect(() => {
         const GSP_coordinate = [-7.770121424862446, 110.37784742786181];
 
-        const m_mono = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png');
+        const osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png',{maxZoom:18});
 
         const map = L.map('mapid', {
             center: GSP_coordinate,
             zoom: 19,
             zoomControl: false,
-            layers: [m_mono]
+            layers: [osm],
+            attributionControl:false
         });
-        const Icon = L.divIcon({
-            iconSize: [30, 30],
-            iconAnchor: [15, 15],
-            popupAnchor: [10, 0],
-            shadowSize: [0, 0],
-            className:'my-icon',
-            keepIconCenter:true
+        const Icon = L.icon({
+            iconUrl:icon,
+            iconSize: [60, 60]
         });
         const marker = L.marker(GSP_coordinate, {
             icon: Icon,

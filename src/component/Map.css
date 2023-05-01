@@ -2,8 +2,6 @@
     background-image: url('./../asset/marker.png');
     background-size: contain;
     background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
     animation: pulse 2s infinite;
   }
 
@@ -18,4 +16,3 @@
       transform: scale(1);
     }
   }
-  

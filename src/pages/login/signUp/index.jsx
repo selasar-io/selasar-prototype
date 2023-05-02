@@ -44,7 +44,7 @@ function SignUp() {
 						getter={setConfirmPassword}
 					/>
 				</section>
-				<h3 className='mt-6 text-sm text-selasar-content'>
+				<h3 className='mt-6 text-tiny text-selasar-content'>
 					Dengan mendaftar, saya menyetujui{' '}
 					<span className='text-selasar-primary font-semibold'>
 						<a href='#'>Syarat & Ketentuan</a>
@@ -57,7 +57,7 @@ function SignUp() {
 				<section className='flex flex-col mt-12 gap-2 mb-24'>
 					<button
 						type='submit'
-						className='bg-selasar-primary text-md font-semibold text-white py-2 rounded-lg active:bg-primary/60'
+						className='bg-selasar-primary text-sm font-semibold text-white py-2 rounded-lg active:bg-primary/60'
 						onClick={() => {
 							console.log(data);
 							setUsername('');
@@ -67,7 +67,7 @@ function SignUp() {
 						}}>
 						Buat Akun
 					</button>
-					<button className='bg-transparent text-md font-semibold text-selasar-primary py-2 rounded-lg active:bg-selasar-content/10'>
+					<button className='bg-transparent text-sm font-semibold text-selasar-primary py-2 rounded-lg active:bg-selasar-content/10'>
 						Kembali
 					</button>
 				</section>

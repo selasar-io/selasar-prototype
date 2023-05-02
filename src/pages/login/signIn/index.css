@@ -1,0 +1,10 @@
+.landing-bg {
+    background-image: url('/src/asset/slank-tprb.png');
+    background-repeat: no-repeat;
+    background-size: auto 837px;
+    background-position: -40px -18px;
+}
+
+.landing-gradient {
+    background: linear-gradient(180deg, rgba(253, 162, 96, 0) -13.27%, #DF2040 107.56%)!important;
+}

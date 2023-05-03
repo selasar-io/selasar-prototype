@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { SignUpPrompt } from '../../../component/SignUpPrompt';
+import { PasswordPrompt, SignUpPrompt } from '../../../component/SignUpPrompt';
 
 function SignUp() {
 	const [username, setUsername] = useState('');
@@ -33,12 +33,12 @@ function SignUp() {
 						placeholder={'Masukkan alamat email'}
 						getter={setUserEmail}
 					/>
-					<SignUpPrompt
+					<PasswordPrompt
 						title={'Kata Sandi'}
 						placeholder={'Buat kata sandi'}
 						getter={setPassword}
 					/>
-					<SignUpPrompt
+					<PasswordPrompt
 						title={'Konfirmasi Kata Sandi'}
 						placeholder={'Tulis ulang kata sandi'}
 						getter={setConfirmPassword}
@@ -67,9 +67,13 @@ function SignUp() {
 						}}>
 						Buat Akun
 					</button>
-					<button className='bg-transparent text-sm font-semibold text-selasar-primary py-2 rounded-lg active:bg-selasar-content/10'>
-						Kembali
-					</button>
+					<a
+						href='/signIn'
+						className='inline w-full justify-center'>
+						<button className='w-full bg-transparent text-sm font-semibold text-selasar-primary py-2 rounded-lg active:bg-selasar-content/10'>
+							Kembali
+						</button>
+					</a>
 				</section>
 			</section>
 		</>

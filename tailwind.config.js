@@ -14,6 +14,20 @@ export default {
 			fontSize: {
 				tiny: '0.625rem',
 			},
+			zIndex: {
+				'1000': '1000',
+			},
+			width: {
+				'25':'25px',
+				'19':'19px'
+			},
+			height: {
+				'27':'27px',
+				'18':'18px'
+			},
+			spacing: {
+				'50%': '50%',
+			  }
 		},
 	},
 	plugins: [],

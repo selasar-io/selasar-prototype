@@ -1,12 +1,10 @@
 import React from 'react';
-import './MenuButton.css'
+import menubutton from './../asset/menu-button.svg'
 const MenuButton = () => {
   return (
-    <div className="menu-button">
-      <div className="strip"></div>
-      <div className="strip"></div>
-      <div className="strip"></div>
-    </div>
+    <button className="fixed top-5 left-5 w-11 h-11 rounded-full bg-red-600 flex flex-col justify-center items-center z-1000">
+      <div className='w-19 h-18' style={{ backgroundImage: `url(${menubutton})` }}></div>
+    </button>
   );
 };
 

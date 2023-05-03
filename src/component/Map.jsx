@@ -14,7 +14,7 @@ function Map() {
             center: GSP_coordinate,
             zoom: 19,
             zoomControl: false,
-            layers: [bing],
+            layers: [osm],
             attributionControl:false
         });
         const Icon = L.icon({

@@ -7,7 +7,7 @@ export const SignUpPrompt = ({ title, placeholder, getter }) => {
 	getter(userInput);
 	return (
 		<section>
-			<h2 className='text-selasar-black text-sm'>{title}</h2>
+			<h2 className='text-selasar-black text-tiny'>{title}</h2>
 			<input
 				className='outline-none transition-colors border-b-2 py-4 text-sm focus:border-selasar-primary w-[100%] placeholder-selasar-content/30 focus:placeholder-transparent'
 				placeholder={placeholder}
@@ -36,7 +36,7 @@ export const PasswordPrompt = ({ title, placeholder, getter }) => {
 	getter(userPassword);
 	return (
 		<section>
-			<h2 className='text-selasar-black text-sm'>{title}</h2>
+			<h2 className='text-selasar-black text-tiny'>{title}</h2>
 			<div className='flex flex-row'>
 				<input
 					className='outline-none transition-colors border-b-2 py-4 text-sm focus:border-selasar-primary w-[100%] placeholder-selasar-content/30 focus:placeholder-transparent'

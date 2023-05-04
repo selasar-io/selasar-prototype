@@ -1,6 +1,6 @@
-import Map from "../../component/Map"
-import MenuButton from "../../component/MenuButton"
-import SearchButton from "../../component/SearchButton"
+import Map from "src/component/Map"
+import MenuButton from "src/component/MenuButton"
+import SearchButton from "src/component/SearchButton"
 function Main() {
     return (
       <>

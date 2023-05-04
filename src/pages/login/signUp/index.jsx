@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { PasswordPrompt, SignUpPrompt } from '../../../component/SignUpPrompt';
+import { PasswordPrompt, SignUpPrompt } from 'src/component/SignUpPrompt';
 
 function SignUp() {
 	const [username, setUsername] = useState('');
@@ -14,10 +14,10 @@ function SignUp() {
 		Password: userPassword,
 	};
 	return (
-		<>
+		<div className='max-w-xl mx-auto my-3'>
 			<section className='p-4'>
-				<h1 className='text-lg font-semibold'>Buat Akun</h1>
-				<section className='flex flex-col gap-10 mt-8'>
+				<h1 className='text-xl font-medium'>Buat Akun</h1>
+				<section className='flex flex-col space-y-8 mt-8'>
 					<SignUpPrompt
 						title={'Username'}
 						placeholder={'Buat username'}
@@ -44,7 +44,7 @@ function SignUp() {
 						getter={setConfirmPassword}
 					/>
 				</section>
-				<h3 className='mt-6 text-tiny text-selasar-content'>
+				<h3 className='mt-6 text-sm text-selasar-content'>
 					Dengan mendaftar, saya menyetujui{' '}
 					<span className='text-selasar-primary font-semibold'>
 						<a href='#'>Syarat & Ketentuan</a>
@@ -54,29 +54,29 @@ function SignUp() {
 						<a href='#'>Kebijakan Privasi Selasar.io</a>
 					</span>
 				</h3>
-				<section className='flex flex-col mt-12 gap-2 mb-24'>
+				<section className='flex flex-col mt-10 space-y-2'>
 					<button
 						type='submit'
-						className='bg-selasar-primary text-sm font-semibold text-white py-2 rounded-lg active:bg-primary/60'
+						className='bg-selasar-primary text-md font-semibold text-white px-8 py-3 rounded-lg active:bg-primary/60'
 						onClick={() => {
-							console.log(data);
 							setUsername('');
 							setUserEmail('');
 							setNamaLengkap('');
 							setPassword('');
 						}}>
-						Buat Akun
+						Daftar
 					</button>
 					<a
-						href='/signIn'
-						className='inline w-full justify-center'>
-						<button className='w-full bg-transparent text-sm font-semibold text-selasar-primary py-2 rounded-lg active:bg-selasar-content/10'>
+						href='/signin'
+						className='inline w-full justify-center'
+					>
+						<button className='w-full bg-transparent text-md font-semibold text-selasar-primary px-8 py-3 rounded-lg active:bg-selasar-content/10'>
 							Kembali
 						</button>
 					</a>
 				</section>
 			</section>
-		</>
+		</div>
 	);
 }
 

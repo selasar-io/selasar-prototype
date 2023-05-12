@@ -20,7 +20,6 @@ function Map() {
             attributionControl: false
         });
 
-
         const Icon1 = L.icon({
             iconUrl: icon1,
             iconSize: [70, 70]
@@ -41,6 +40,11 @@ function Map() {
             title: 'event2',
             bubblingMouseEvents: true
         }).bindTooltip("event2").openTooltip().addTo(map);
+
+        window.leafletMap = map
+        window.leafletMarker1 = marker1
+        window.leafletMarker2 = marker2
+
         return () => {
             map.remove()
         }

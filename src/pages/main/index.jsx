@@ -4,9 +4,11 @@ import SearchButton from "src/component/SearchButton"
 function Main() {
     return (
       <>
-      <MenuButton/>
-      <a href="/search"><SearchButton/></a>
-      <Map/>
+        <MenuButton/>
+        <a href="/search">
+          <SearchButton/>
+        </a>
+        <Map/>
       </>
     )
   }

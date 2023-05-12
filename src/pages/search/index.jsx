@@ -42,7 +42,7 @@ function Search() {
 
 	return (
 		<div className='max-w-2xl mx-auto'>
-      <div className='mt-10 mb-16 mx-8'>
+      <div className='mt-10 mb-16 mx-6'>
         <div className='flex justify-center text-selasar-primary mb-8'>
           <a className='inline-flex flex-col items-center' href='/'>
             <div className='mb-2'>

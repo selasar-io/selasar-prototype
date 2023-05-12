@@ -75,8 +75,17 @@ function Search() {
 	return (
 		<div className='max-w-2xl mx-auto'>
       <div className='mt-10 mb-16 mx-8'>
-        <div className='text-selasar-primary mb-9'>
-          <LandingLogo />
+        <div className='flex justify-center text-selasar-primary mb-8'>
+          <a className='inline-flex flex-col items-center' href='/'>
+            <div className='mb-2'>
+              <svg width="40" viewBox="0 0 51 44" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.962891" y="22.1494" width="21.8505" height="21.8505" rx="10.9252" />
+                <rect x="28.385" y="0.29895" width="21.8505" height="21.8505" rx="10.9252" />
+                <rect x="28.385" y="32.0928" width="11.9073" height="11.9073" rx="5.95363" />
+              </svg>
+            </div>
+            <div className="text-2xl font-medium">Selasar.io</div>
+          </a>
         </div>
         <div className='space-y-5 mb-9'>
           <div className='flex items-center'>

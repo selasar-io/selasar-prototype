@@ -59,10 +59,11 @@ function SignUp() {
 						type='submit'
 						className='bg-selasar-primary text-md font-semibold text-white px-8 py-3 rounded-lg active:bg-primary/60'
 						onClick={() => {
-							setUsername('');
-							setUserEmail('');
-							setNamaLengkap('');
-							setPassword('');
+							// setUsername('');
+							// setUserEmail('');
+							// setNamaLengkap('');
+							// setPassword('');
+							location.href = '/verification'
 						}}>
 						Daftar
 					</button>

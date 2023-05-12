@@ -3,7 +3,6 @@ import Main from './pages/main'
 import SignIn from './pages/login/signIn'
 import SignUp from './pages/login/signUp'
 import Search from './pages/search'
-import Details from './pages/details'
 import Verification from './pages/login/verification'
 import NotFound from './pages/404'
 function App() {
@@ -21,9 +20,6 @@ function App() {
         </Route>
         <Route exact path="/search">
           < Search/>
-        </Route>
-        <Route exact path="/details">
-          < Details/>
         </Route>
         <Route exact path="/verification">
           < Verification/>

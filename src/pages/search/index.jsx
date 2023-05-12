@@ -3,10 +3,10 @@ import { events, categories, tags } from 'src/data'
 import arrowLeftIcon from 'src/asset/arrow-left.svg'
 import searchIcon from 'src/asset/search-alt.svg'
 
-function TagLabel ({ name, isActive = false }) {
+function TagLabel ({ name, isActive = false, onClick = () => {} }) {
   return (
     <div className={`px-6 rounded-[22px] cursor-pointer 
-      ${isActive ? 'bg-selasar-primary text-white' : 'bg-[#D9D9D9] text-selasar-content'}`}>
+      ${isActive ? 'bg-selasar-primary text-white' : 'bg-[#D9D9D9] text-selasar-content'}`} onClick={onClick}>
       {name}
     </div>
   )
@@ -16,7 +16,7 @@ function Event ({ id, details }) {
   const isClosed = details.registration === 'Registration Closed'
 
   return (
-    <div>
+    <div className='basis-[220px] shrink-0'>
       <div className='mb-2'>
         <img 
           className='rounded-[10px]' 
@@ -35,6 +35,10 @@ function Event ({ id, details }) {
 
 function Search() {
   const [activeTag, setActiveTag] = useState('Terdekat')
+
+  function focusToSearchInput () {
+    document.getElementById('search').focus()
+  }
 
 	return (
 		<div className='max-w-2xl mx-auto'>
@@ -58,16 +62,16 @@ function Search() {
                 <img src={arrowLeftIcon} alt="Back" width={22} height={22} />
               </a>
             </div>
-            <div className='grow flex px-5 py-3 text-[#B4B4B4] border-2 border-[#B4B4B4] rounded-[12px]'>
+            <div className='grow flex px-5 py-3 text-[#B4B4B4] border-2 border-[#B4B4B4] rounded-[12px]' onClick={focusToSearchInput}>
               <div className='mr-4'>
                 <img src={searchIcon} alt="Search" width={22} height={22} />
               </div>
-              <div>Cari event di dekatmu</div>
+              <input id='search' className='w-full focus:outline-none' type='text' placeholder='Cari event di dekatmu'></input>
             </div>
           </div>
           <div className='flex space-x-3 overflow-auto [&::-webkit-scrollbar]:hidden'>
             {tags.map((tagName, i) => (
-              <TagLabel name={tagName} isActive={tagName === activeTag} key={i} />
+              <TagLabel name={tagName} isActive={tagName === activeTag} key={i} onClick={() => setActiveTag(tagName)} />
             ))}
           </div>
         </div>
@@ -76,7 +80,7 @@ function Search() {
             <div key={i}>
               <h2 className='text-xl font-semibold mb-1'>{cat.title}</h2>
               <h3 className='text-selasar-content mb-4'>{cat.desc}</h3>
-              <div className='flex space-x-3'>
+              <div className='flex space-x-3 flex-nowrap overflow-auto [&::-webkit-scrollbar]:hidden'>
                 {cat.events.map((eventId, i) => (
                   <Event id={eventId} details={events[eventId]} key={i} />
                 ))}

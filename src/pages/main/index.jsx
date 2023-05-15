@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 import Map from "src/component/Map"
 import MenuButton from "src/component/MenuButton"
 import SearchButton from "src/component/SearchButton"
@@ -52,7 +53,7 @@ function EventDetails () {
         <div className='mb-4'>
           <img 
             className='h-[100px] rounded-[10px]' 
-            src={`/src/asset/events-img/${eventId}.png`} 
+            src={`/asset/events-img/${eventId}.png`} 
             alt={event.title}
           />
         </div>
@@ -70,9 +71,9 @@ function Main() {
         <div className="h-full">
           <MenuButton />
           <div className='flex flex-col items-center justify-center fixed bottom-5 right-0 left-0 z-1000'>
-            <a href="/search">
+            <Link to="/search">
               <SearchButton />
-            </a>
+            </Link>
             <EventDetails />
           </div>
           <MapControl />

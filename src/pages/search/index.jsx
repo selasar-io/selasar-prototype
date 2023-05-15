@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { events, categories, tags } from 'src/data'
 import arrowLeftIcon from 'src/asset/arrow-left.svg'
 import searchIcon from 'src/asset/search-alt.svg'
@@ -20,7 +21,7 @@ function Event ({ id, details }) {
       <div className='mb-2'>
         <img 
           className='rounded-[10px]' 
-          src={`/src/asset/events-img/${id}.png`} 
+          src={`/asset/events-img/${id}.png`} 
           alt={details.title}
         />
       </div>
@@ -44,7 +45,7 @@ function Search() {
 		<div className='max-w-2xl mx-auto'>
       <div className='mt-10 mb-16 mx-6'>
         <div className='flex justify-center text-selasar-primary mb-8'>
-          <a className='inline-flex flex-col items-center' href='/'>
+          <Link to='/' className='inline-flex flex-col items-center'>
             <div className='mb-2'>
               <svg width="40" viewBox="0 0 51 44" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.962891" y="22.1494" width="21.8505" height="21.8505" rx="10.9252" />
@@ -53,14 +54,14 @@ function Search() {
               </svg>
             </div>
             <div className="text-2xl font-medium">Selasar.io</div>
-          </a>
+          </Link>
         </div>
         <div className='space-y-5 mb-9'>
           <div className='flex items-center'>
             <div className='mr-5'>
-              <a href="/">
+              <Link to="/">
                 <img src={arrowLeftIcon} alt="Back" width={22} height={22} />
-              </a>
+              </Link>
             </div>
             <div className='grow flex px-5 py-3 text-[#B4B4B4] border-2 border-[#B4B4B4] rounded-[12px]' onClick={focusToSearchInput}>
               <div className='mr-4'>

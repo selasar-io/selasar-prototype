@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import LandingLogo from 'src/component/LandingLogo'
 import { PasswordPrompt, SignUpPrompt } from 'src/component/SignUpPrompt';
 
@@ -24,9 +25,9 @@ function SignIn() {
             <div className="p-3 text-selasar-primary rounded-[10px] cursor-pointer">Lupa Password?</div>
           </div>
         </div>
-        <a href="/signup" className="mt-10 px-8 py-3 rounded-[10px] text-center font-medium cursor-pointer">
+        <Link to="/signup" className="mt-10 px-8 py-3 rounded-[10px] text-center font-medium cursor-pointer">
           Buat Akun
-        </a>
+        </Link>
       </div>
     </div>
   )

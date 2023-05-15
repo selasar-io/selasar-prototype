@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { useHistory, Link } from 'react-router-dom';
 import { PasswordPrompt, SignUpPrompt } from 'src/component/SignUpPrompt';
 
 function SignUp() {
+	const history = useHistory()
 	const [username, setUsername] = useState('');
 	const [namaLengkap, setNamaLengkap] = useState('');
 	const [userEmail, setUserEmail] = useState('');
@@ -13,6 +15,7 @@ function SignUp() {
 		Email: userEmail,
 		Password: userPassword,
 	};
+
 	return (
 		<div className='max-w-xl mx-auto my-3'>
 			<section className='p-4'>
@@ -47,11 +50,11 @@ function SignUp() {
 				<h3 className='mt-6 text-sm text-selasar-content'>
 					Dengan mendaftar, saya menyetujui{' '}
 					<span className='text-selasar-primary font-semibold'>
-						<a href='#'>Syarat & Ketentuan</a>
+						<a href='javascript:void(0)'>Syarat & Ketentuan</a>
 					</span>{' '}
 					dan{' '}
 					<span className='text-selasar-primary font-semibold'>
-						<a href='#'>Kebijakan Privasi Selasar.io</a>
+						<a href='javascript:void(0)'>Kebijakan Privasi Selasar.io</a>
 					</span>
 				</h3>
 				<section className='flex flex-col mt-10 space-y-2'>
@@ -63,18 +66,15 @@ function SignUp() {
 							// setUserEmail('');
 							// setNamaLengkap('');
 							// setPassword('');
-							location.href = '/verification'
+							history.push('/verification')
 						}}>
 						Daftar
 					</button>
-					<a
-						href='/signin'
-						className='inline w-full justify-center'
-					>
+					<Link to='/signin' className='inline w-full justify-center'>
 						<button className='w-full bg-transparent text-md font-semibold text-selasar-primary px-8 py-3 rounded-lg active:bg-selasar-content/10'>
 							Kembali
 						</button>
-					</a>
+					</Link>
 				</section>
 			</section>
 		</div>

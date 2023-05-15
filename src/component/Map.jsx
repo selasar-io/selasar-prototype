@@ -26,9 +26,8 @@ function Map() {
         });
         const marker1 = L.marker(event1, {
             icon: Icon1,
-            title: 'event1',
             bubblingMouseEvents: true
-        }).bindTooltip("event1").openTooltip().addTo(map);
+        }).bindTooltip("Event 1").openTooltip().addTo(map);
 
 
         const Icon2 = L.icon({
@@ -37,9 +36,8 @@ function Map() {
         });
         const marker2 = L.marker(event2, {
             icon: Icon2,
-            title: 'event2',
             bubblingMouseEvents: true
-        }).bindTooltip("event2").openTooltip().addTo(map);
+        }).bindTooltip("Event 2").openTooltip().addTo(map);
 
         window.leafletMap = map
         window.leafletMarker1 = marker1

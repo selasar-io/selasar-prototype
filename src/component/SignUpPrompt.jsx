@@ -2,26 +2,24 @@ import { useState } from 'react';
 import eyeOpen from '../asset/BsEye.svg';
 import eyeClosed from '../asset/BsEyeSlash.svg';
 
-export const SignUpPrompt = ({ title, placeholder, getter }) => {
-	const [userInput, setInput] = useState('');
-	getter(userInput);
+export const SignUpPrompt = ({ title, placeholder, value, onChange }) => {
 	return (
 		<section>
 			<h2 className='text-selasar-black text-tiny'>{title}</h2>
 			<input
 				className='outline-none transition-colors border-b-2 py-4 text-sm focus:border-selasar-primary w-[100%] placeholder-selasar-content/30 focus:placeholder-transparent'
 				placeholder={placeholder}
-				onChange={(e) => setInput(e.target.value)}
-				value={userInput}
+				onChange={(e) => onChange(e.target.value)}
+				value={value}
 				required
 				type='text'></input>
 		</section>
 	);
 };
 
-export const PasswordPrompt = ({ title, placeholder, getter }) => {
-	const [userPassword, setUserPassword] = useState('');
+export const PasswordPrompt = ({ title, placeholder, value, onChange }) => {
 	const [isHidden, setIsHidden] = useState(true);
+
 	var source = '';
 	var _type = '';
 
@@ -33,7 +31,6 @@ export const PasswordPrompt = ({ title, placeholder, getter }) => {
 		_type = 'text';
 	}
 
-	getter(userPassword);
 	return (
 		<section>
 			<h2 className='text-selasar-black text-tiny'>{title}</h2>
@@ -41,8 +38,8 @@ export const PasswordPrompt = ({ title, placeholder, getter }) => {
 				<input
 					className='outline-none transition-colors border-b-2 py-4 text-sm focus:border-selasar-primary w-[100%] placeholder-selasar-content/30 focus:placeholder-transparent'
 					placeholder={placeholder}
-					onChange={(e) => setUserPassword(e.target.value)}
-					value={userPassword}
+					onChange={(e) => onChange(e.target.value)}
+					value={value}
 					required
 					type={_type}
 				/>
